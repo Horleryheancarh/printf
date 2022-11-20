@@ -1,22 +1,29 @@
 #include "main.h"
 
 /**
+ *printchar - writes character to stdout
+ *@arg: input character
+ *@buffer: pointer to buffer
+ *@i: index
  *
- *
+ *Return: integer
  */
 int printchar(va_list arg, char *buffer, unsigned int i)
 {
 	char c;
+
 	c = va_arg(arg, int);
 	hand_buffer(buffer, c, i);
-
 	return (1);
 }
 
 /**
+ *printstr - writes string to stdout
+ *@arg: input character
+ *@buffer: pointer to buffer
+ *@i: index
  *
- *
- *
+ *Return: integer
  */
 int printstr(va_list arg, char *buffer, unsigned int i)
 {
@@ -39,10 +46,12 @@ int printstr(va_list arg, char *buffer, unsigned int i)
 }
 
 /**
+ *printint - writes integer to stdout
+ *@arg: input character
+ *@buffer: pointer to buffer
+ *@i: index
  *
- *
- *
- *
+ *Return: integer
  */
 int printint(va_list arg, char *buffer, unsigned int i)
 {
@@ -79,40 +88,17 @@ int printint(va_list arg, char *buffer, unsigned int i)
 	return (i + neg);
 }
 
-
 /**
+ *printprc - writes character to stdout
+ *@a: input character
+ *@buffer: pointer to buffer
+ *@i: index
  *
- *
- *
+ *Return: 1;
  */
-int printprc(va_list arg  __attribute__((unused)), char *buffer, unsigned int i)
+int printprc(va_list a  __attribute__((unused)), char *buffer, unsigned int i)
 {
 	hand_buffer(buffer, '%', i);
-
 	return (1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

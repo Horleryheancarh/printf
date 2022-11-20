@@ -46,31 +46,31 @@ int (*get_print_function(const char *s, int i))(va_list, char *, unsigned int)
  */
 int ct_print_function(const char *s, int i)
 {
-        printt p[] = {
-                {"c", printchar},
-                {"s", printstr},
-                {"i", printint},
+	printt p[] = {
+		{"c", printchar},
+		{"s", printstr},
+		{"i", printint},
 		{"%", printprc},
-                {NULL, NULL}
-        };
-        int j = 0, k = 0, index;
+		{NULL, NULL}
+	};
 
-        index = i;
-        while (p[j].arg)
-        {
-                if (s[i] == p[j].arg[k])
-                {
-                        if (p[j].arg[k + 1] != '\0')
-                                i++, j++;
-                        else
-                                break;
-                }
-                else
-                {
-                        k = 0, j++;
-                        i = index;
-                }
-        }
-        return (j);
+	int j = 0, k = 0, index;
+
+	index = i;
+	while (p[j].arg)
+	{
+		if (s[i] == p[j].arg[k])
+		{
+			if (p[j].arg[k + 1] != '\0')
+				i++, j++;
+			else
+				break;
+		}
+		else
+		{
+			k = 0, j++;
+			i = index;
+		}
+	}
+	return (j);
 }
-
