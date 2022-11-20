@@ -80,7 +80,17 @@ int printint(va_list arg, char *buffer, unsigned int i)
 }
 
 
+/**
+ *
+ *
+ *
+ */
+int printprc(va_list arg  __attribute__((unused)), char *buffer, unsigned int i)
+{
+	hand_buffer(buffer, '%', i);
 
+	return (1);
+}
 
 
 

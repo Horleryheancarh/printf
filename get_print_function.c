@@ -13,6 +13,7 @@ int (*get_print_function(const char *s, int i))(va_list, char *, unsigned int)
 		{"c", printchar},
 		{"s", printstr},
 		{"i", printint},
+		{"%", printprc},
 		{NULL, NULL}
 	};
 	int j = 0, k = 0, index;
@@ -49,6 +50,7 @@ int ct_print_function(const char *s, int i)
                 {"c", printchar},
                 {"s", printstr},
                 {"i", printint},
+		{"%", printprc},
                 {NULL, NULL}
         };
         int j = 0, k = 0, index;

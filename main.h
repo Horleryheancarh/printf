@@ -19,6 +19,7 @@ int ct_print_function(const char *, int);
 int printstr(va_list, char *, unsigned int);
 int printchar(va_list, char *, unsigned int);
 int printint(va_list, char *, unsigned int);
+int printprc(va_list __attribute__((unused)), char *, unsigned int);
 
 
 #endif
