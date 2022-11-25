@@ -18,6 +18,7 @@ int (*get_print_function(const char *, int))(va_list, char *, unsigned int);
 int print_str(va_list, char *, unsigned int);
 int print_char(va_list, char *, unsigned int);
 int print_int(va_list, char *, unsigned int);
+int print_prc(va_list, char *, unsigned int);
 int print_bnr(va_list, char *, unsigned int);
 char *fill_binary_array(char *, long int, int, int);
 
