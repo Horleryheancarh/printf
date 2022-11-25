@@ -43,7 +43,7 @@ int ct_print_function(const char *s, int i)
 		{"s", print_str},
 		{"i", print_int},
 		{"d", print_int},
-		{"%", print_prc},`
+		{"%", print_prc},
 		{"b", print_bnr},
 		{NULL, NULL}
 	};
