@@ -10,29 +10,20 @@
 int (*get_print_function(const char *s, int i))(va_list, char *, unsigned int)
 {
 	printt p[] = {
-		{"c", printchar},
-		{"s", printstr},
-		{"i", printint},
-		{"%", printprc},
+		{"c", print_char},
+		{"s", print_str},
+		{"i", print_int},
+		{"d", print_int},
+		{"b", print_bnr},
 		{NULL, NULL}
 	};
-	int j = 0, k = 0, index;
+	int j = 0;
 
-	index = i;
 	while (p[j].arg)
 	{
-		if (s[i] == p[j].arg[k])
-		{
-			if (p[j].arg[k + 1] != '\0')
-				i++, j++;
-			else
-				break;
-		}
-		else
-		{
-			k = 0, j++;
-			i = index;
-		}
+		if (s[i] == p[j].arg[0])
+			break;
+		j++;
 	}
 	return (p[j].f);
 }
@@ -47,30 +38,21 @@ int (*get_print_function(const char *s, int i))(va_list, char *, unsigned int)
 int ct_print_function(const char *s, int i)
 {
 	printt p[] = {
-		{"c", printchar},
-		{"s", printstr},
-		{"i", printint},
-		{"%", printprc},
+		{"c", print_char},
+		{"s", print_str},
+		{"i", print_int},
+		{"d", print_int},
+		{"b", print_bnr},
 		{NULL, NULL}
 	};
 
-	int j = 0, k = 0, index;
+	int j = 0;
 
-	index = i;
 	while (p[j].arg)
 	{
-		if (s[i] == p[j].arg[k])
-		{
-			if (p[j].arg[k + 1] != '\0')
-				i++, j++;
-			else
-				break;
-		}
-		else
-		{
-			k = 0, j++;
-			i = index;
-		}
+		if (s[i] == p[j].arg[0])
+			break;
+		j++;
 	}
 	return (j);
 }

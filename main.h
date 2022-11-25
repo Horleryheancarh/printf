@@ -15,11 +15,11 @@ unsigned int hand_buffer(char *, char, unsigned int);
 int print_buffer(char *, unsigned int);
 int _printf(const char *, ...);
 int (*get_print_function(const char *, int))(va_list, char *, unsigned int);
-int ct_print_function(const char *, int);
-int printstr(va_list, char *, unsigned int);
-int printchar(va_list, char *, unsigned int);
-int printint(va_list, char *, unsigned int);
-int printprc(va_list __attribute__((unused)), char *, unsigned int);
+int print_str(va_list, char *, unsigned int);
+int print_char(va_list, char *, unsigned int);
+int print_int(va_list, char *, unsigned int);
+int print_bnr(va_list, char *, unsigned int);
+char *fill_binary_array(char *, long int, int, int);
 
 
 #endif
