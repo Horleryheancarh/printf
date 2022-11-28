@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				function = get_print_function(format, i + 1);
+				function = get_print_function(format[i + 1]);
 				if (function == NULL)
 				{
 					hand_buffer(buffer, format[i], ibuf);
