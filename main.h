@@ -14,12 +14,12 @@ typedef struct print
 unsigned int hand_buffer(char *, char, unsigned int);
 int print_buffer(char *, unsigned int);
 int _printf(const char *, ...);
-int (*get_print_function(char))(va_list, char *, unsigned int);
-int ct_print_function(va_list, char *, unsigned int);
+int (*get_print_function(const char *, int))(va_list, char *, unsigned int);
+int ct_print_function(const char *, int);
 int print_str(va_list, char *, unsigned int);
 int print_char(va_list, char *, unsigned int);
 int print_int(va_list, char *, unsigned int);
-int print_prc(va_list,  __attribute__((unused)), char *, unsigned int);
+int print_prc(va_list a  __attribute__((unused)), char *, unsigned int);
 int print_bnr(va_list, char *, unsigned int);
 int print_unt(va_list, char *, unsigned int);
 int print_oct(va_list, char *, unsigned int);
